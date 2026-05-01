@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Andhika</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Font Awesome (WA & IG FIX) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  background: #f8f9ff;
+}
+
+/* NAVBAR */
+.navbar {
+  transition: 0.3s;
+}
+.navbar.scrolled {
+  background: linear-gradient(90deg,#4e73df,#1cc88a);
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #4e73df, #1cc88a, #36b9cc);
+  color: white;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* SECTION */
+section {
+  padding: 80px 0;
+}
+
+/* CARD MODERN */
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+/* GLASS EFFECT */
+.glass {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+}
+
+/* BUTTON */
+.btn-custom {
+  background: linear-gradient(90deg,#4e73df,#1cc88a);
+  color: white;
+  border: none;
+}
+.btn-custom:hover {
+  opacity: 0.9;
+}
+
+/* SOCIAL */
+.social-icon {
+  display: inline-block;
+  margin: 10px;
+  font-size: 28px;
+  color: white;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;    
+  border-radius: 50%;
+  background: linear-gradient(135deg,#4e73df,#1cc88a);
+  transition: 0.4s;
+}
+
+.social-icon:hover {
+  transform: translateY(-10px) scale(1.15);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.3);
+}
+
+/* Pulse halus */
+.social-icon::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(78,115,223,0.3);
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.social-icon:hover {
+  transform: translateY(-8px) scale(1.1);
+}
+.social-icon.ig {
+  background: linear-gradient(45deg,#feda75,#d62976,#962fbf);
+}
+.social-icon.tiktok {
+  background: linear-gradient(45deg, #000000, #ff0050);
+}
+
+/* FLOAT BUTTONS */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 30px;
+  padding: 15px;
+  border-radius: 50%;
+  z-index: 9999;
+  animation: bounce 2s infinite;
+}
+.ig-float {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: linear-gradient(45deg,#feda75,#d62976,#962fbf);
+  color: white;
+  font-size: 28px;
+  padding: 14px;
+  border-radius: 50%;
+  z-index: 9999;
+}
+  .tiktok-float {
+  position: fixed;
+  bottom: 160px; /* di atas IG & WA */
+  right: 20px;
+  background: linear-gradient(45deg,#000,#000);
+  color: white;
+  font-size: 26px;
+  padding: 13px;
+  border-radius: 50%;
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+.tiktok-float:hover {
+  transform: scale(1.2);
+}
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(90deg,#4e73df,#1cc88a);
+  color: white;
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">MyCV</a>
+
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">Tentang</a></li>
+        <li class="nav-item"><a href="#pribadi" class="nav-link">Data</a></li>
+        <li class="nav-item"><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
+        <li class="nav-item"><a href="#pengalaman" class="nav-link">Pengalaman</a></li>
+        <li class="nav-item"><a href="#organisasi" class="nav-link">Organisasi</a></li>
+        <li class="nav-item"><a href="#sertifikat" class="nav-link">Sertifikat</a></li>
+        <li class="nav-item"><a href="#hobi" class="nav-link">Hobi</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container" data-aos="zoom-in">
+    <h1>Andhika Ilham Akbar</h1>
+    <p>Mahasiswa | Web Developer</p>
+    <a href="#about" class="btn btn-light mt-3">Mulai</a>
+  </div>
+</section>
+
+<!-- TENTANG -->
+<section id="about">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Tentang Saya</h2>
+
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center" data-aos="fade-right">
+        <img src="c:\Users\Andhika\OneDrive\Desktop\Documents\Pweb\WhatsApp Image 2026-03-30 at 2.34.45 PM.jpeg" class="img-fluid shadow rounded">
+      </div>
+
+      <div class="col-md-8" data-aos="fade-left">
+        <div class="glass p-4">
+          <p>
+            Saya adalah mahasiswa yang memiliki minat di bidang teknologi, dan juga Saya adalah orang yang antusias,motivasi diri,dapat
+            diandalkan,bertanggung jawab dan pekerja keras.
+            Saya mampu bekerja dengan baik dalam lingkungan
+            tim maupun inisiatif sendiri. Saya dapat bekerja
+            dengan baik dibawah tekanan dan mematuhi tanggat
+            waktu yang ketat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DATA PRIBADI -->
+<section id="pribadi" class="bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Data Pribadi</h2>
+
+    <div class="col-md-6 mx-auto">
+      <ul class="list-group glass" data-aos="zoom-in">
+        <li class="list-group-item">Nama: Andhika Ilham Akbar</li>
+        <li class="list-group-item">Alamat: J.L.KEMIRI VI, Kota Tangerang Selatan </li>
+        <li class="list-group-item">Email: andhikailham21@gmail.com </li>
+        <li class="list-group-item">Jenis Kelamin: Laki-laki </li>
+        <li class="list-group-item">Kewarga Negaraan: Indonesia </li>
+        <li class="list-group-item">Status: Belum Menikah </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PENDIDIKAN -->
+<section id="pendidikan">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Pendidikan</h2>
+
+    <div class="card p-4 mb-3" data-aos="fade-right">
+      <h5>Universitas Budi Luhur</h5>
+      <p>Teknik Informatika  2024 - Sekarang</p>
+    </div>
+
+    <div class="card p-4" data-aos="fade-left">
+      <h5>SMK</h5>
+      <p>Teknik Komputer & Jaringan  2020-2023</p>
+    </div>
+  </div>
+</section>
+
+<!-- PENGALAMAN -->
+<section id="pengalaman" class="bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Pengalaman</h2>
+
+    <div class="card p-4" data-aos="zoom-in">
+      <h5>Magang/Prakerin Pusdatin Kemendikbudristek</h5>
+      <p>Substansi Tata Kelola TIK - 2022</p>
+      <h5>Sinar Mutiara Cell</h5>
+      <p>Staff Keluar Barang/Packing - 2024</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORGANISASI -->
+<section id="organisasi">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Organisasi</h2>
+
+    <div class="card p-4" data-aos="zoom-in">
+      <h5>OSIS</h5>
+      <p1>Bendahara  2021-2022</p1>
+      <p2>Ketua ROHIS  2022-2023</p2>
+    </div>
+  </div>
+</section>
+
+<!-- SERTIFIKAT -->
+<section id="sertifikat">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Sertifikat</h2>
+
+    <div class="row">
+
+      <!-- ITEM 1 -->
+      <div class="col-md-4 mb-4" data-aos="zoom-in">
+        <div class="card certificate-card">
+          <img src="c:\Users\Andhika\OneDrive\Desktop\Documents\Pweb\WhatsApp Image 2026-04-30 at 11.45.26 PM (1) - Copy.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#cert1">
+          <div class="card-body text-center">
+            <h5>Data Sience</h5>
+            <p class="small">Dicoding / 2026</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <!-- ITEM 2 -->
+      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card certificate-card">
+          <img src="c:\Users\Andhika\OneDrive\Desktop\Documents\Pweb\WhatsApp Image 2026-04-30 at 11.45.26 PM.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#cert2">
+          <div class="card-body text-center">
+            <h5>Cybersecurity</h5>
+            <p class="small">cisco / 2026</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- HOBI -->
+<section id="hobi" class="bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5" data-aos="fade-up">Hobi</h2>
+
+    <div class="row">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="card p-3">Ngoding</div>
+      </div>
+      <div class="col-md-4" data-aos="flip-up">
+        <div class="card p-3">Mendengarkan Musik</div>
+      </div>
+      <div class="col-md-4" data-aos="flip-right">
+        <div class="card p-3">Nonton Film</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="text-center mb-4" data-aos="fade-up">Kontak</h2>
+
+    <div class="col-md-6 mx-auto" data-aos="zoom-in">
+      <form class="glass p-4">
+        <input type="text" class="form-control mb-3" placeholder="Nama">
+        <input type="email" class="form-control mb-3" placeholder="Email">
+        <textarea class="form-control mb-3" rows="4" placeholder="Pesan"></textarea>
+        <button class="btn btn-custom w-100">Kirim</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SOSIAL -->
+<section class="bg-light text-center">
+  <h2 data-aos="fade-up">Media Sosial</h2>
+  <a href="https://instagram.com/i_amsakbr" target="_blank" class="social-icon ig">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="https://wa.me/6285781202057" target="_blank" class="social-icon">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="https://www.tiktok.com/@dikolz1" target="_blank" class="social-icon tiktok">
+  <i class="fab fa-tiktok"></i>
+</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center p-3">
+  <p>© 2026 Andhika CV</p>
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init();
+
+window.addEventListener("scroll", function() {
+  document.querySelector(".navbar").classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>
